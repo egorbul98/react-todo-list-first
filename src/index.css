@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todos-block {
+  display: flex;
+  justify-content: space-between;
+  height: 600px;
+  margin-top: 30px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.todos-sidebar {
+  width: 33%;
+  background-color: #9caeb6;
+  padding: 20px;
+  border-right: 3px solid #868a8a;
+}
+
+.todos-sidebar .list {
+  height: 70%;
+  overflow: auto;
+}
+
+.todos-content {
+  width: 67%;
+  padding: 20px;
+  background-color: #f0faff;
+  overflow: auto;
+}
+
+.item-todos-link-list .item {
+  padding: 4px 10px;
+  background-color: #c1d5dd;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.item-todos-link-list .item .icon {
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.item-todos-link-list .item .del {
+  margin-left: auto;
+  background-color: transparent;
+  outline: none;
+  border: 1.5px solid #333636;
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 18px;
+  height: 18px;
+}
+
+.item-todos-link-list .item .del:hover {
+  color: #fff;
+  background-color: #333636;
+}
+
+.item-todos-link-list .item.active,
+.item-todos-link-list .item:hover {
+  background-color: #e6c9c9;
+}
+
+.popup .list-color .color {
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.popup .list-color .color.active {
+  border: 1.5px solid #333636;
+}
+
+.popup .list-color {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.popup {
+  display: none;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.popup.active {
+  display: block;
+}
+
+.input-title {
+  margin-top: 10px;
+  border-radius: 6px;
+  background-color: none;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 4px 8px;
+}
+
+.list-title .icon {
+  font-size: 14px;
+  cursor: pointer;
+  display: none;
+  margin-left: 5px;
+}
+
+.list-title .icon:hover {
+  color: #868a8a;
+}
+
+.list-title:hover .icon {
+  display: inline-block;
+}
+
+
+.add-task-block {
+
+  margin-top: 20px;
+}
+
+.add-task-block.active .btn {
+  display: none;
+}
+
+.add-task-block .btn {
+  cursor: pointer;
+}
+
+.add-task-block .form {
+  display: none;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  overflow: hidden;
+
+}
+
+.add-task-block.active .form {
+  display: block;
+}
+
+.add-task-block input {
+  width: 100%;
+}
+
+.add-task-block .wrap-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.add-task-block .wrap-btns button {
+  width: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.add-task-block .wrap-btns button:last-child {
+  margin-right: 0;
+}
+
+
+
+.list-tasks .task {
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.list-tasks .task input[type="text"] {
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* .list-tasks .task .del {
+  padding-left: 20px;
+  cursor: pointer;
+} */
+.list-tasks .task .icon {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 20px;
+  cursor: pointer;
+  color: #333636;
+}
+
+.list-tasks .task:hover .icon {
+  opacity: 1;
+  visibility: visible;
+}
+.list-tasks .task:hover .icon:hover {
+  color: #2196F3;
+}
+
+
+.all-list-btn{
+background-color: #fff;
+padding: 4px 10px;
+margin-bottom: 24px;
+border-radius: 6px;
+cursor: pointer;
+display: flex;
+align-items: center;
+text-decoration: none;
+display: block;
+width: 100%;
+}
+
+.all-list-btn:hover, .all-list-btn.active{
+background-color: rgb(134, 193, 228);
+}
+
+.task-item{
+  padding-left: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.task-item:not(:first-child){
+  padding-top: 12px;
+}
